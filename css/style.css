@@ -140,3 +140,12 @@ footer li{list-style:none;margin:.35rem 0}footer .brand b{color:#fff}footer .cop
 }
 @media(prefers-reduced-motion:reduce){.hx{height:auto}.hx-pin{position:relative;height:auto}.hx-hint{display:none}.lbl,.lbl::after{transition:none}}
 @media(max-width:720px){.hx .chip.c1{bottom:-4%;left:-4%}.hx .chip.c2{top:2%;right:-4%}}
+
+/* np-photos: page photo strip (added 2026-10-29) */
+.np-photos .np-grid--3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.5rem,1.3vw,1rem)}
+.np-photos .np-g{margin:0;position:relative;overflow:hidden;border-radius:var(--radius-lg,16px);aspect-ratio:4/3;background:var(--color-surface-alt,#eee);box-shadow:0 10px 28px -18px rgba(0,0,0,.45)}
+.np-photos .np-g img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.np-photos .np-g:hover img{transform:scale(1.045)}
+.np-photos .np-note{margin:.75rem 0 0;font-size:.85rem;opacity:.75}
+@media (max-width:700px){.np-photos .np-grid--3{grid-template-columns:repeat(2,minmax(0,1fr))}.np-photos .np-g:first-child{grid-column:span 2;aspect-ratio:16/10}}
+@media (prefers-reduced-motion:reduce){.np-photos .np-g img{transition:none}.np-photos .np-g:hover img{transform:none}}
